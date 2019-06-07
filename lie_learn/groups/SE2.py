@@ -25,7 +25,7 @@ def invert(g, parameterization):
     Invert element g in SE(2), where g can have any supported parameterization.
     """
 
-    # Change to (theta, tau1, tau2) paramterization.
+    # Change to (theta, tau1, tau2) paramterization comment. 
     g_rt = change_parameterization(g, p_from=parameterization, p_to='rotation-translation')
     g_inv_rt = np.empty_like(g_rt)
     g_inv_rt[..., 0] = -g_rt[..., 0]
